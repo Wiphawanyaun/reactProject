@@ -1,25 +1,29 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import Cafe from "./components/Cafe";
-import Cat from "./components/Cat";
-import TextInputExample from "./components/TextInputExample";
+import { StyleSheet, Text, View,Button } from 'react-native'
+import React from 'react'
 
-export default function App() {
+const App = () => {
+  const showData =() =>{
+    alert("Hello Button")
+  }
+
   return (
-    <View >
-      {/* <Text>Open up App.js to start working on your app!</Text> */}
-      {/* <TextInputExample /> */}
-      {/* <Cat/> */}
-      <Cafe/>
+    <View  style={styles.container}>
+       <Text>Button Example</Text>
+       <Button
+        title = 'Click Me'
+        onPress={showData}
+        color = 'skyblue'
+      />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+  container:{
+   flex: 1,
+   alignItems: 'center',
+   justifyContent: 'center'
+  }
 });
+
+export default App
